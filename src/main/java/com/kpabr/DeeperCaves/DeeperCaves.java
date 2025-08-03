@@ -116,21 +116,7 @@ public class DeeperCaves
 
         
         config.initConfig(event);
-     	fluids.setupFluids();
-     	fluids.setupFluidBlocks();
-        items.setupItems();
-     	items.registerItems();
-     	items.registerItemsOreDict();
-     	blocks.setupBlocks();
-     	blocks.registerBlocks();
-     	blocks.registerBlocksOreDict();
-        blocks.setupHarvestLevels();
-     	recipes.setupShapelessCrafting();
-		recipes.setupShapedCrafting();
-     	recipes.setupSmelting();
      	worldgen.setupWorldgen();
-     	mobs.setupMobs();
-     	GameRegistry.registerFuelHandler(new DeeperFuel());
      	proxy.registerRenderers();
 
      	DeeperAchievements.setupAchievements();
