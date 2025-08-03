@@ -115,9 +115,21 @@ public class DeeperCaves
         ClientCommandHandler.instance.registerCommand(new VersionCommand());
 
         
-        config.initConfig(event);
+        fluids.setupFluids();
+     	fluids.setupFluidBlocks();
+        items.setupItems();
+     	items.registerItems();
+     	items.registerItemsOreDict();
+     	blocks.setupBlocks();
+     	blocks.registerBlocks();
+     	blocks.registerBlocksOreDict();
+        blocks.setupHarvestLevels();
+     	recipes.setupShapelessCrafting();
+		recipes.setupShapedCrafting();
+     	recipes.setupSmelting();
      	worldgen.setupWorldgen();
-     	proxy.registerRenderers();
+     	mobs.setupMobs();
+     	GameRegistry.registerFuelHandler(new DeeperFuel());
 
      	DeeperAchievements.setupAchievements();
      	DeeperAchievements.registerAchievements();
